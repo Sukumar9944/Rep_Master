@@ -13,6 +13,17 @@ speed = st.text_input('Enter the Speed')
 
 start_button = st.button('Start')
 
+engine = pyttsx3.init()
+# engine.setProperty('rate', speed)
+# for i in range(1, int(num_range)+1):
+#     engine.say(i)
+#     engine.runAndWait()
+
+
+
+
+
+
 # def master(speed, num_range):    
 #     engine = pyttsx3.init()
 #     engine.setProperty('rate', speed)
