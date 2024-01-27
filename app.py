@@ -24,4 +24,3 @@ def master(speed, num_range):
 if start_button and num_range and speed:
     master(int(speed), num_range)
     st.success('RepMaster - Program Completed 🏋️‍')
-
