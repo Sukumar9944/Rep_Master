@@ -2,7 +2,7 @@ import streamlit as st
 import pyttsx3
 
 # Setting Webpage Configurations
-st.set_page_config(page_icon="",page_title="Audio Extracter", layout="wide")
+st.set_page_config(page_icon="©",page_title="Rep Master", layout="wide")
 
 st.header(':red[Rep Master] ®')
 st.caption('Feel the rhythm, own the beat !')
