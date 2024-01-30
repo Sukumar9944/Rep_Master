@@ -1,30 +1,13 @@
-from gtts import gTTS
+from playsound import playsound
 import os
-import pygame
 import streamlit as st
 
-st.title('sample')
+st.title('suku')
+start = st.button('start')
 
-start = st.button('starting')
+abs_path = os.path.abspath('sound.mp3')
 
 if start:
-    for i in range(1, 10):
-        tts = gTTS(text=f"{i}", lang="en", slow=False, timeout=10)
-        tts.save("sound.mp3")
-
-        abs_path = os.path.abspath(f"sound.mp3")
-
-        pygame.init()
-
-        # Load the audio file
-        audio = pygame.mixer.music.load(abs_path)
-
-        pygame.mixer.music.play()
-
-        # Allow time for the sound to play
-        pygame.time.delay(1700)  # Adjust the delay as needed
-
-        # Quit pygame
-        pygame.quit()
-
-        os.remove(abs_path)
+    for i in range(10):
+        playsound(abs_path)
+        print('Finished')
