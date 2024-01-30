@@ -28,8 +28,6 @@ def main():
         st.success("RepMaster - Program Started 🏋️")
         # Use JavaScript to play audio in the browser
         st.markdown(f'<audio src="{audio_url}" controls autoplay></audio>', unsafe_allow_html=True)
-    else:
-        st.warning("Please select the Rep Count.")
 
 if __name__ == "__main__":
     main()
