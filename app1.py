@@ -3,7 +3,7 @@ import streamlit as st
 def main():
     st.title("Audio Player App")
 
-    audio_url = st.text_input("Enter the URL of the audio file:")
+    audio_url = 'https://www.freetamilringtones.com/jdownloads/dialogue_ringtones./kamal_haasan/vettaiyadu_villayadu_intro.mp3'
     play_button = st.button("Start Playing")
 
     if play_button:
