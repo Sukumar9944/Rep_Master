@@ -10,8 +10,6 @@ def main():
 
     num_range = st.selectbox('Select your Rep Count', ['5', '10', '15', '20'])
 
-    start_button = st.button('Start')
-
     if num_range == '5':
         audio_url = 'https://raw.githubusercontent.com/Sukumar9944/Rep_Master/main/Sounds/OnetoFive.mp3'
     
@@ -23,12 +21,14 @@ def main():
 
     elif num_range == '20':
         audio_url = 'https://raw.githubusercontent.com/Sukumar9944/Rep_Master/main/Sounds/OnetoTwenty.mp3'
+
+    return audio_url
         
+run_app = main()
 
-    if start_button and audio_url and num_range:
-        st.success("RepMaster - Program Started 🏋️")
-        # Use JavaScript to play audio in the browser
-        st.markdown(f'<audio src="{audio_url}" controls autoplay></audio>', unsafe_allow_html=True)
+start_button = st.button('Start')
 
-if __name__ == "__main__":
-    main()
+if run_app and start_button:
+    st.success("RepMaster - Program Started 🏋️")
+    # Use JavaScript to play audio in the browser
+    st.markdown(f'<audio src="{run_app}" controls autoplay></audio>', unsafe_allow_html=True)
