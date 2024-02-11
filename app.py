@@ -3,6 +3,7 @@ import streamlit as st
 # Setting Webpage Configurations
 st.set_page_config(page_icon="©",page_title="Rep Master", layout="wide")
 
+@st.cache_resource
 def main():
     st.header(':red[Rep Master] ®')
     st.caption('Feel the rhythm, own the beat !')
