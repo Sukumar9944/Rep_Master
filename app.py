@@ -4,11 +4,9 @@ import streamlit as st
 st.set_page_config(page_icon="©",page_title="Rep Master", layout="wide")
 
 @st.cache_resource
-def main():
+def main(num_range):
     st.header(':red[Rep Master] ®')
     st.caption('Feel the rhythm, own the beat !')
-
-    num_range = st.selectbox('Select your Rep Count', ['5', '10', '15', '20'])
 
     if num_range == '5':
         audio_url = 'https://raw.githubusercontent.com/Sukumar9944/Rep_Master/main/Sounds/OnetoFive.mp3'
@@ -23,8 +21,10 @@ def main():
         audio_url = 'https://raw.githubusercontent.com/Sukumar9944/Rep_Master/main/Sounds/OnetoTwenty.mp3'
 
     return audio_url
+
+num_range = st.selectbox('Select your Rep Count', ['5', '10', '15', '20'])
         
-run_app = main()
+run_app = main(num_range)
 
 start_button = st.button('Start')
 
