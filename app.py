@@ -3,11 +3,11 @@ import streamlit as st
 # Setting Webpage Configurations
 st.set_page_config(page_icon="©",page_title="Rep Master", layout="wide")
 
+st.header(':red[Rep Master] ®')
+st.caption('Feel the rhythm, own the beat !')
+
 @st.cache_resource
 def main(num_range):
-    st.header(':red[Rep Master] ®')
-    st.caption('Feel the rhythm, own the beat !')
-
     if num_range == '5':
         audio_url = 'https://raw.githubusercontent.com/Sukumar9944/Rep_Master/main/Sounds/OnetoFive.mp3'
     
